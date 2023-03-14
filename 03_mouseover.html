@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover</title>
+    <style>
+        #box{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="box">Mouseover here to see a magic!!!!!!!!!!</h1>
+    <p id="displayValue"></p>
+
+    <script>
+        let box = document.getElementById("box")
+        let displayValue = document.getElementById("displayValue")
+
+        box.addEventListener("mouseover",()=>{
+            displayValue.innerText =`You hover in my area Get lost from here and never come back here to Disturb me to show this msg again and again`
+        })
+    </script>
+</body>
+</html>

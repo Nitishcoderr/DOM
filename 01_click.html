@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(231, 86, 231);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 80vh;
+            width: 80vw;
+
+        }
+        button{
+            padding:5px 20px 5px 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        p{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button id="increamentbtn">Increment</button>
+    <p id="displayValue">0</p>
+    <button id="decreamentbtn">Decreament</button>
+
+    <button id="resetbtn">Reset</button>
+</div>
+
+    <script>
+        let increament = document.getElementById("increamentbtn")
+        let decreament = document.getElementById("decreamentbtn")
+        let displayValue = document.getElementById("displayValue")
+        let reset = document.getElementById("resetbtn")
+
+        decreament.addEventListener("click", () => {
+            const value = Number(displayValue.innerText)
+            if(value > 0){
+                displayValue.innerText = value - 1;
+            }
+            else{
+                displayValue.innerText = `(-ve) Not Allow`
+            }
+        })
+
+        increament.addEventListener("click", () => {
+            const value = Number(displayValue.innerText)
+            if(value >= 100){
+                displayValue.innerText = `10+ value not allow`;
+            }
+            else{
+                displayValue.innerText = value + 1;
+            }
+        })
+        
+        reset.addEventListener("click", () => {
+            displayValue.innerText = 0
+        })
+
+    </script>
+</body>
+</html>

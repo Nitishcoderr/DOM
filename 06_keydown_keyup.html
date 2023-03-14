@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyDown and KeyUP</title>
+
+</head>
+<body>
+    <input type="text" id="box">
+    <h4 id="displayValue"></h4>
+
+    <script>
+        let box = document.getElementById("box")
+        let displayValue = document.getElementById("displayValue")
+
+        box.addEventListener("keyup",function(e){
+            displayValue.innerText = `You have pressed => ${e.key}`
+        })
+    </script>
+</body>
+</html>
